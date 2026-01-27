@@ -29,6 +29,10 @@ Maybe incorporate some sort of quality metrics for intelligence or quality of to
 
 I've checked in the actual results I got into the results-published/ folder, check those out. You can see the raw logs too if you need some some reason(!). I wanted to understand some of the numbers myself, so I formatted the Excel (Excel files also check into the published results if you want to pivot table away!)
 
+All graphs show
+- Medium context scenario: 2048 input prompt processing and 512 output token generation. Then,
+- Small context scenario: 512 input prompt processing and 128 output token generation.
+
 ### MiniMax M2.1
 
 ![graph](results-published/MiniMax.M2.1.Unsloth/MiniMax-M2.1-speedtest.png)
