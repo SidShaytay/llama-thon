@@ -1,0 +1,13 @@
+Command: toolbox run -c llama-rocm-6.4.4 -- llama-bench -fa 1 -ngl 99 -mmp 0 -m /mnt/data/projects/ai/models/hub/models--unsloth--gemma-3-4b-it-GGUF/snapshots/5a3566e716d80f709ed7b79817eaf7733d2a1fce/gemma-3-4b-it-UD-Q8_K_XL.gguf
+Timestamp: 2026-01-26T19:56:15-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -: | --------------: | -------------------: |
+| gemma3 4B Q8_0                 |   4.80 GiB |     3.88 B | ROCm       |  99 |  1 |           pp512 |      2704.47 ± 11.14 |
+| gemma3 4B Q8_0                 |   4.80 GiB |     3.88 B | ROCm       |  99 |  1 |           tg128 |         37.57 ± 0.06 |
+
+build: 142cbe2ac (7838)
+---------------------------------------------------------------------
+Duration: 25s

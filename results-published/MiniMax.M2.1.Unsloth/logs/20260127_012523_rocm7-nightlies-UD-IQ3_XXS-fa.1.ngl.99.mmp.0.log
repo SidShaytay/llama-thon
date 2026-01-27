@@ -1,0 +1,13 @@
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -m /mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/UD-IQ3_XXS/MiniMax-M2.1-UD-IQ3_XXS-00001-of-00002.gguf
+Timestamp: 2026-01-27T01:25:23-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -: | --------------: | -------------------: |
+| minimax-m2 230B.A10B IQ3_XXS - 3.0625 bpw |  86.90 GiB |   228.69 B | ROCm       |  99 |  1 |           pp512 |        125.13 ± 0.61 |
+| minimax-m2 230B.A10B IQ3_XXS - 3.0625 bpw |  86.90 GiB |   228.69 B | ROCm       |  99 |  1 |           tg128 |         30.43 ± 0.00 |
+
+build: 142cbe2ac (7838)
+---------------------------------------------------------------------
+Duration: 77s

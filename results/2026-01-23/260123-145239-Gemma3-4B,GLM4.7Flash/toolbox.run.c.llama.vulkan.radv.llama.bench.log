@@ -1,0 +1,22 @@
+  Running: toolbox run -c llama-vulkan-radv -- llama-bench -fa 1 -ngl 99 -mmp 0 -m /mnt/data/projects/ai/models/hub/models--ggml-org--gemma-3-4b-it-GGUF/snapshots/d0976223747697cb51e056d85c532013931fe52e/gemma-3-4b-it-Q4_K_M.gguf
+    Logging: results/260123-145239/toolbox.run.c.llama.vulkan.radv.llama.bench.log
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Radeon 8060S Graphics (RADV GFX1151) (radv) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 65536 | int dot: 1 | matrix cores: KHR_coopmat
+| model                          |       size |     params | backend    | ngl | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -: | --------------: | -------------------: |
+| gemma3 4B Q4_K - Medium        |   2.31 GiB |     3.88 B | Vulkan     |  99 |  1 |           pp512 |     2053.66 ± 116.61 |
+| gemma3 4B Q4_K - Medium        |   2.31 GiB |     3.88 B | Vulkan     |  99 |  1 |           tg128 |         65.38 ± 0.54 |
+
+build: a14b960bc (7816)
+---------------------------------------------------------------------
+  Running: toolbox run -c llama-vulkan-radv -- llama-bench -fa 1 -ngl 99 -mmp 0 -m /mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/12cd9f9b1e63a20a0f47149d573e8918e97d6a83/GLM-4.7-Flash-UD-Q4_K_XL.gguf
+    Logging: results/260123-145239/toolbox.run.c.llama.vulkan.radv.llama.bench.log
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Radeon 8060S Graphics (RADV GFX1151) (radv) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 65536 | int dot: 1 | matrix cores: KHR_coopmat
+| model                          |       size |     params | backend    | ngl | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -: | --------------: | -------------------: |
+| deepseek2 ?B Q4_K - Medium     |  16.31 GiB |    29.94 B | Vulkan     |  99 |  1 |           pp512 |       739.92 ± 25.34 |
+| deepseek2 ?B Q4_K - Medium     |  16.31 GiB |    29.94 B | Vulkan     |  99 |  1 |           tg128 |         65.64 ± 0.23 |
+
+build: a14b960bc (7816)
+---------------------------------------------------------------------

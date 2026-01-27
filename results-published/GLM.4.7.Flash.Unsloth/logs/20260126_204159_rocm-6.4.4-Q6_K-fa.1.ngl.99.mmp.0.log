@@ -1,0 +1,13 @@
+Command: toolbox run -c llama-rocm-6.4.4 -- llama-bench -fa 1 -ngl 99 -mmp 0 -m /mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/66205ea11ef638d83850389bd921e6c199f7504e/GLM-4.7-Flash-Q6_K.gguf
+Timestamp: 2026-01-26T20:41:59-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -: | --------------: | -------------------: |
+| deepseek2 30B.A3B Q6_K         |  22.99 GiB |    29.94 B | ROCm       |  99 |  1 |           pp512 |       748.45 ± 15.48 |
+| deepseek2 30B.A3B Q6_K         |  22.99 GiB |    29.94 B | ROCm       |  99 |  1 |           tg128 |         44.19 ± 0.17 |
+
+build: 142cbe2ac (7838)
+---------------------------------------------------------------------
+Duration: 27s

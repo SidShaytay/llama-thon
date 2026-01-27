@@ -1,0 +1,13 @@
+Command: toolbox run -c llama-vulkan-radv -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/UD-Q3_K_XL/MiniMax-M2.1-UD-Q3_K_XL-00001-of-00003.gguf
+Timestamp: 2026-01-26T23:22:12-08:00
+---
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Radeon 8060S Graphics (RADV GFX1151) (radv) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 65536 | int dot: 1 | matrix cores: KHR_coopmat
+| model                          |       size |     params | backend    | ngl | n_ubatch | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -------: | -: | --------------: | -------------------: |
+| minimax-m2 230B.A10B Q3_K - Medium |  94.33 GiB |   228.69 B | Vulkan     |  99 |     2048 |  1 | pp2048 @ d32768 |         16.63 ± 0.33 |
+| minimax-m2 230B.A10B Q3_K - Medium |  94.33 GiB |   228.69 B | Vulkan     |  99 |     2048 |  1 |  tg512 @ d32768 |         12.17 ± 0.01 |
+
+build: 142cbe2ac (7838)
+---------------------------------------------------------------------
+Duration: 1789s

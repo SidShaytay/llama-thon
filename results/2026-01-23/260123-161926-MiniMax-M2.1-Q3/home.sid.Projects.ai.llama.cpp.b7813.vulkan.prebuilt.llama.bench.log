@@ -1,0 +1,42 @@
+  Running: /home/sid/Projects/ai/llama.cpp-b7813-vulkan-prebuilt/llama-bench -fa 1 -ngl 99 -mmp 0 -m /mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/UD-Q3_K_XL/MiniMax-M2.1-UD-Q3_K_XL-00001-of-00003.gguf
+    Logging: results/260123-161926/home.sid.Projects.ai.llama.cpp.b7813.vulkan.prebuilt.llama.bench.log
+load_backend: loaded RPC backend from /mnt/data/projects/ai/llama.cpp-b7813-vulkan-prebuilt/libggml-rpc.so
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Radeon 8060S Graphics (RADV GFX1151) (radv) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 65536 | int dot: 1 | matrix cores: KHR_coopmat
+load_backend: loaded Vulkan backend from /mnt/data/projects/ai/llama.cpp-b7813-vulkan-prebuilt/libggml-vulkan.so
+load_backend: loaded CPU backend from /mnt/data/projects/ai/llama.cpp-b7813-vulkan-prebuilt/libggml-cpu-zen4.so
+| model                          |       size |     params | backend    | ngl | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -: | --------------: | -------------------: |
+| minimax-m2 230B.A10B Q3_K - Medium |  94.33 GiB |   228.69 B | Vulkan     |  99 |  1 |           pp512 |        137.59 ± 1.33 |
+| minimax-m2 230B.A10B Q3_K - Medium |  94.33 GiB |   228.69 B | Vulkan     |  99 |  1 |           tg128 |         32.85 ± 0.95 |
+
+build: 51fa458a9 (7813)
+---------------------------------------------------------------------
+  Running: /home/sid/Projects/ai/llama.cpp-b7813-vulkan-prebuilt/llama-bench -fa 1 -ngl 99 -mmp 0 -m /mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/Q3_K_M/MiniMax-M2.1-Q3_K_M-00001-of-00003.gguf
+    Logging: results/260123-174907/home.sid.Projects.ai.llama.cpp.b7813.vulkan.prebuilt.llama.bench.log
+load_backend: loaded RPC backend from /mnt/data/projects/ai/llama.cpp-b7813-vulkan-prebuilt/libggml-rpc.so
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Radeon 8060S Graphics (RADV GFX1151) (radv) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 65536 | int dot: 1 | matrix cores: KHR_coopmat
+load_backend: loaded Vulkan backend from /mnt/data/projects/ai/llama.cpp-b7813-vulkan-prebuilt/libggml-vulkan.so
+load_backend: loaded CPU backend from /mnt/data/projects/ai/llama.cpp-b7813-vulkan-prebuilt/libggml-cpu-zen4.so
+| model                          |       size |     params | backend    | ngl | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -: | --------------: | -------------------: |
+| minimax-m2 230B.A10B Q3_K - Medium | 101.76 GiB |   228.69 B | Vulkan     |  99 |  1 |           pp512 |        140.65 ± 0.74 |
+| minimax-m2 230B.A10B Q3_K - Medium | 101.76 GiB |   228.69 B | Vulkan     |  99 |  1 |           tg128 |         32.56 ± 1.65 |
+
+build: 51fa458a9 (7813)
+---------------------------------------------------------------------
+  Running: /home/sid/Projects/ai/llama.cpp-b7813-vulkan-prebuilt/llama-bench -fa 1 -ngl 99 -mmp 0 -m /mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/UD-IQ3_XXS/MiniMax-M2.1-UD-IQ3_XXS-00001-of-00002.gguf
+    Logging: results/260123-174907/home.sid.Projects.ai.llama.cpp.b7813.vulkan.prebuilt.llama.bench.log
+load_backend: loaded RPC backend from /mnt/data/projects/ai/llama.cpp-b7813-vulkan-prebuilt/libggml-rpc.so
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Radeon 8060S Graphics (RADV GFX1151) (radv) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 65536 | int dot: 1 | matrix cores: KHR_coopmat
+load_backend: loaded Vulkan backend from /mnt/data/projects/ai/llama.cpp-b7813-vulkan-prebuilt/libggml-vulkan.so
+load_backend: loaded CPU backend from /mnt/data/projects/ai/llama.cpp-b7813-vulkan-prebuilt/libggml-cpu-zen4.so
+| model                          |       size |     params | backend    | ngl | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -: | --------------: | -------------------: |
+| minimax-m2 230B.A10B IQ3_XXS - 3.0625 bpw |  86.90 GiB |   228.69 B | Vulkan     |  99 |  1 |           pp512 |        154.17 ± 0.51 |
+| minimax-m2 230B.A10B IQ3_XXS - 3.0625 bpw |  86.90 GiB |   228.69 B | Vulkan     |  99 |  1 |           tg128 |         32.69 ± 0.04 |
+
+build: 51fa458a9 (7813)
+---------------------------------------------------------------------

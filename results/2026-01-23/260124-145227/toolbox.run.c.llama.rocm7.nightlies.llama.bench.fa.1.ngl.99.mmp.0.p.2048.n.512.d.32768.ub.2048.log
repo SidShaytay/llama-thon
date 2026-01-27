@@ -1,0 +1,102 @@
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--ggml-org--gemma-3-4b-it-GGUF/snapshots/d0976223747697cb51e056d85c532013931fe52e/gemma-3-4b-it-Q4_K_M.gguf
+Timestamp: 2026-01-24T14:57:04-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | n_ubatch | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -------: | -: | --------------: | -------------------: |
+| gemma3 4B Q4_K - Medium        |   2.31 GiB |     3.88 B | ROCm       |  99 |     2048 |  1 | pp2048 @ d32768 |       1416.40 ± 6.34 |
+| gemma3 4B Q4_K - Medium        |   2.31 GiB |     3.88 B | ROCm       |  99 |     2048 |  1 |  tg512 @ d32768 |         52.50 ± 0.04 |
+
+build: bb02f74c6 (7823)
+---------------------------------------------------------------------
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--unsloth--gemma-3-4b-it-GGUF/snapshots/5a3566e716d80f709ed7b79817eaf7733d2a1fce/gemma-3-4b-it-Q8_0.gguf
+Timestamp: 2026-01-24T15:11:00-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | n_ubatch | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -------: | -: | --------------: | -------------------: |
+| gemma3 4B Q8_0                 |   3.84 GiB |     3.88 B | ROCm       |  99 |     2048 |  1 | pp2048 @ d32768 |        924.55 ± 3.89 |
+| gemma3 4B Q8_0                 |   3.84 GiB |     3.88 B | ROCm       |  99 |     2048 |  1 |  tg512 @ d32768 |         38.81 ± 0.01 |
+
+build: bb02f74c6 (7823)
+---------------------------------------------------------------------
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/12cd9f9b1e63a20a0f47149d573e8918e97d6a83/GLM-4.7-Flash-UD-Q4_K_XL.gguf
+Timestamp: 2026-01-24T15:42:13-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | n_ubatch | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -------: | -: | --------------: | -------------------: |
+| deepseek2 ?B Q4_K - Medium     |  16.31 GiB |    29.94 B | ROCm       |  99 |     2048 |  1 | pp2048 @ d32768 |         87.62 ± 0.10 |
+| deepseek2 ?B Q4_K - Medium     |  16.31 GiB |    29.94 B | ROCm       |  99 |     2048 |  1 |  tg512 @ d32768 |         25.75 ± 0.01 |
+
+build: bb02f74c6 (7823)
+---------------------------------------------------------------------
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/12cd9f9b1e63a20a0f47149d573e8918e97d6a83/GLM-4.7-Flash-UD-Q6_0.gguf
+Timestamp: 2026-01-24T16:33:01-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+main: error: failed to load model '/mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/12cd9f9b1e63a20a0f47149d573e8918e97d6a83/GLM-4.7-Flash-UD-Q6_0.gguf'
+| model                          |       size |     params | backend    | ngl | n_ubatch | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -------: | -: | --------------: | -------------------: |
+---------------------------------------------------------------------
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/12cd9f9b1e63a20a0f47149d573e8918e97d6a83/GLM-4.7-Flash-UD-Q8_0.gguf
+Timestamp: 2026-01-24T16:33:14-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+main: error: failed to load model '/mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/12cd9f9b1e63a20a0f47149d573e8918e97d6a83/GLM-4.7-Flash-UD-Q8_0.gguf'
+| model                          |       size |     params | backend    | ngl | n_ubatch | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -------: | -: | --------------: | -------------------: |
+---------------------------------------------------------------------
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/UD-Q3_K_XL/MiniMax-M2.1-UD-Q3_K_XL-00001-of-00003.gguf
+Timestamp: 2026-01-24T17:17:01-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+HW Exception by GPU node-1 (Agent handle: 0x19b743d0) reason :GPU Hang
+---------------------------------------------------------------------
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/Q3_K_M/MiniMax-M2.1-Q3_K_M-00001-of-00003.gguf
+Timestamp: 2026-01-24T19:39:31-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+HW Exception by GPU node-1 (Agent handle: 0x310c83d0) reason :GPU Hang
+---------------------------------------------------------------------
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/UD-IQ3_XXS/MiniMax-M2.1-UD-IQ3_XXS-00001-of-00002.gguf
+Timestamp: 2026-01-24T22:06:25-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | n_ubatch | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -------: | -: | --------------: | -------------------: |
+| minimax-m2 230B.A10B IQ3_XXS - 3.0625 bpw |  86.90 GiB |   228.69 B | ROCm       |  99 |     2048 |  1 | pp2048 @ d32768 |         59.66 ± 0.27 |
+HW Exception by GPU node-1 (Agent handle: 0x18c493d0) reason :GPU Hang
+---------------------------------------------------------------------
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/66205ea11ef638d83850389bd921e6c199f7504e/GLM-4.7-Flash-Q6_K.gguf
+Timestamp: 2026-01-25T01:51:11-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | n_ubatch | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -------: | -: | --------------: | -------------------: |
+| deepseek2 ?B Q6_K              |  22.99 GiB |    29.94 B | ROCm       |  99 |     2048 |  1 | pp2048 @ d32768 |         86.44 ± 0.14 |
+| deepseek2 ?B Q6_K              |  22.99 GiB |    29.94 B | ROCm       |  99 |     2048 |  1 |  tg512 @ d32768 |         24.18 ± 0.02 |
+
+build: bb02f74c6 (7823)
+---------------------------------------------------------------------
+Command: toolbox run -c llama-rocm7-nightlies -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/66205ea11ef638d83850389bd921e6c199f7504e/GLM-4.7-Flash-Q8_0.gguf
+Timestamp: 2026-01-25T03:05:25-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | n_ubatch | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -------: | -: | --------------: | -------------------: |
+| deepseek2 ?B Q8_0              |  29.65 GiB |    29.94 B | ROCm       |  99 |     2048 |  1 | pp2048 @ d32768 |         84.88 ± 0.28 |
+| deepseek2 ?B Q8_0              |  29.65 GiB |    29.94 B | ROCm       |  99 |     2048 |  1 |  tg512 @ d32768 |         22.96 ± 0.01 |
+
+build: bb02f74c6 (7823)
+---------------------------------------------------------------------

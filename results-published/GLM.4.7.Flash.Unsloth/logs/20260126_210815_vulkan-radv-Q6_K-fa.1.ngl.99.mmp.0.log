@@ -1,0 +1,13 @@
+Command: toolbox run -c llama-vulkan-radv -- llama-bench -fa 1 -ngl 99 -mmp 0 -m /mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/66205ea11ef638d83850389bd921e6c199f7504e/GLM-4.7-Flash-Q6_K.gguf
+Timestamp: 2026-01-26T21:08:15-08:00
+---
+ggml_vulkan: Found 1 Vulkan devices:
+ggml_vulkan: 0 = Radeon 8060S Graphics (RADV GFX1151) (radv) | uma: 1 | fp16: 1 | bf16: 0 | warp size: 64 | shared memory: 65536 | int dot: 1 | matrix cores: KHR_coopmat
+| model                          |       size |     params | backend    | ngl | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -: | --------------: | -------------------: |
+| deepseek2 30B.A3B Q6_K         |  22.99 GiB |    29.94 B | Vulkan     |  99 |  1 |           pp512 |        653.36 ± 8.65 |
+| deepseek2 30B.A3B Q6_K         |  22.99 GiB |    29.94 B | Vulkan     |  99 |  1 |           tg128 |         56.75 ± 0.14 |
+
+build: 142cbe2ac (7838)
+---------------------------------------------------------------------
+Duration: 26s
