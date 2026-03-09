@@ -1,0 +1,13 @@
+Command: toolbox run -c llama-rocm-6.4.4 -- llama-bench -fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048 -m /mnt/data/projects/ai/models/hub/models--bartowski--stepfun-ai_Step-3.5-Flash-GGUF/snapshots/a2943ef56a0a240bdfb9a2feee97a775f612476d/stepfun-ai_Step-3.5-Flash-IQ3_XXS/stepfun-ai_Step-3.5-Flash-IQ3_XXS-00001-of-00002.gguf
+Timestamp: 2026-02-17T21:31:34-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | n_ubatch | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -------: | -: | --------------: | -------------------: |
+| step35 196B.A11B IQ3_XXS - 3.0625 bpw |  72.82 GiB |   196.96 B | ROCm       |  99 |     2048 |  1 | pp2048 @ d32768 |        183.23 ± 2.83 |
+| step35 196B.A11B IQ3_XXS - 3.0625 bpw |  72.82 GiB |   196.96 B | ROCm       |  99 |     2048 |  1 |  tg512 @ d32768 |         19.80 ± 0.00 |
+
+build: 2b089c77 (8085)
+---------------------------------------------------------------------
+Duration: 379s

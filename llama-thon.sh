@@ -3,12 +3,15 @@ set -uo pipefail
 
 # ============================================================================
 # CONFIGURATION
+#
+# Intentionally kept as absolute paths and commentable lines for 
+# visual directness
 # ============================================================================
 
 # Models to benchmark
 models=(
 	# Small
-	"/mnt/data/projects/ai/models/hub/models--unsloth--gemma-3-4b-it-GGUF/snapshots/5a3566e716d80f709ed7b79817eaf7733d2a1fce/gemma-3-4b-it-UD-Q4_K_XL.gguf"
+#	"/mnt/data/projects/ai/models/hub/models--unsloth--gemma-3-4b-it-GGUF/snapshots/5a3566e716d80f709ed7b79817eaf7733d2a1fce/gemma-3-4b-it-UD-Q4_K_XL.gguf"
 #	"/mnt/data/projects/ai/models/hub/models--unsloth--gemma-3-4b-it-GGUF/snapshots/5a3566e716d80f709ed7b79817eaf7733d2a1fce/gemma-3-4b-it-UD-Q6_K_XL.gguf"
 #	"/mnt/data/projects/ai/models/hub/models--unsloth--gemma-3-4b-it-GGUF/snapshots/5a3566e716d80f709ed7b79817eaf7733d2a1fce/gemma-3-4b-it-UD-Q8_K_XL.gguf"
 
@@ -16,13 +19,16 @@ models=(
 #	"/mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/66205ea11ef638d83850389bd921e6c199f7504e/GLM-4.7-Flash-UD-Q4_K_XL.gguf"
 #    "/mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/66205ea11ef638d83850389bd921e6c199f7504e/GLM-4.7-Flash-Q6_K.gguf"
 #    "/mnt/data/projects/ai/models/hub/models--unsloth--GLM-4.7-Flash-GGUF/snapshots/66205ea11ef638d83850389bd921e6c199f7504e/GLM-4.7-Flash-Q8_0.gguf"
+	/mnt/data/projects/ai/models/hub/models--unsloth--Qwen3.5-35B-A3B-GGUF/snapshots/bc014a17be43adabd7066b7a86075ff935c6a4e2/Qwen3.5-35B-A3B-UD-Q5_K_XL.gguf
+#	/mnt/data/projects/ai/models/hub/models--unsloth--Qwen3.5-27B-GGUF/snapshots/3221f178a6b842d04f1fb42f1c413534adcc0a6a/Qwen3.5-27B-UD-Q5_K_XL.gguf
+#	/mnt/data/projects/ai/models/hub/models--unsloth--Qwen3.5-9B-GGUF/snapshots/3885219b6810b007914f3a7950a8d1b469d598a5/Qwen3.5-9B-UD-Q5_K_XL.gguf
 
 	# X-Large
-	# MiniMax M2.1 variants
-	#"/mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/UD-Q3_K_XL/MiniMax-M2.1-UD-Q3_K_XL-00001-of-00003.gguf"
-	#"/mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/Q3_K_M/MiniMax-M2.1-Q3_K_M-00001-of-00003.gguf"
-	#"/mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.1-GGUF/snapshots/e25470274f38829e84d6cd52c13fa4b9d48142c2/UD-IQ3_XXS/MiniMax-M2.1-UD-IQ3_XXS-00001-of-00002.gguf"
+	#"/mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.5-GGUF/snapshots/7c50dca0e5592483ad308ecffc876aecac725660/UD-IQ3_XXS/MiniMax-M2.5-UD-IQ3_XXS-00001-of-00003.gguf"
+#	"/mnt/data/projects/ai/models/hub/models--unsloth--MiniMax-M2.5-GGUF/snapshots/7c50dca0e5592483ad308ecffc876aecac725660/UD-IQ2_XXS/MiniMax-M2.5-UD-IQ2_XXS-00001-of-00003.gguf"
+#	"/mnt/data/projects/ai/models/hub/models--bartowski--stepfun-ai_Step-3.5-Flash-GGUF/snapshots/a2943ef56a0a240bdfb9a2feee97a775f612476d/stepfun-ai_Step-3.5-Flash-IQ3_XXS/stepfun-ai_Step-3.5-Flash-IQ3_XXS-00001-of-00002.gguf"
 
+	# Misc
 	#"/mnt/data/projects/ai/models/hub/models--ggml-org--gemma-3-4b-it-GGUF/snapshots/d0976223747697cb51e056d85c532013931fe52e/gemma-3-4b-it-Q8_0.gguf"
     #"/mnt/data/projects/ai/models/hub/models--ggml-org--gpt-oss-120b-GGUF/snapshots/d932fcea62f83e088d8f076a2cd2d7eb02dfa682/gpt-oss-120b-mxfp4-00001-of-00003.gguf"
     #"/mnt/data/projects/ai/models/hub/models--ggml-org--gpt-oss-20b-GGUF/snapshots/e1dc459feff949ff451ce107337a2026daa80df8/gpt-oss-20b-mxfp4.gguf"
@@ -36,7 +42,7 @@ models=(
 # Runners (llama-bench invocations)
 runners=(
 	# Strix Halo Toolboxes
-#	"toolbox run -c llama-rocm-6.4.4 -- llama-bench"
+	"toolbox run -c llama-rocm-6.4.4 -- llama-bench"
 	# fails on current kernel+rocm config
 	#"toolbox run -c llama-rocm-7.1.1 -- llama-bench"
 #	"toolbox run -c llama-rocm-7.2 -- llama-bench"
@@ -45,7 +51,7 @@ runners=(
 
 	# rocm 7 nightly - pre-built vs local builds
 #	"toolbox run -c llama.cpp-b7840-rocm-7nightlies -- llama-bench"
-	"/home/sid/Apps/llama.cpp-b7837-rocm-prebuilt/llama-bench"
+	#"/home/sid/Apps/llama.cpp-b7837-rocm-prebuilt/llama-bench"
 
 	# vulkan - pre-built vs local builds
 #	"/home/sid/Apps/llama.cpp-b7839-vulkan-prebuilt/llama-bench"
@@ -54,7 +60,7 @@ runners=(
 
 # Benchmark argument sets (each string is a complete set of args)
 bench_arg_sets=(
-	"-fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048"
+#	"-fa 1 -ngl 99 -mmp 0 -p 2048 -n 512 -d 32768 -ub 2048"
 	"-fa 1 -ngl 99 -mmp 0"
 )
 

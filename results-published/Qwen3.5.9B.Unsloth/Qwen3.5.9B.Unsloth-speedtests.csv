@@ -1,0 +1,3 @@
+OS,Kernel,linux-firmware,start-time,llama-cpp,binary-in,backend,model,quantization,pp_size,pp,tg_size,tg,gtt_peak_mb,duration_sec,params,notes
+Fedora Linux 43,6.18.13-200.fc43.x86_64,20260110-1.fc43.noarch,20260303_180709,b8193,toolbox,rocm-6.4.4,Qwen3.5-9B (Unsloth),UD-Q5_K_XL,512,847.69,128,27.73,6610,34,-fa 1 -ngl 99 -mmp 0,
+Fedora Linux 43,6.18.13-200.fc43.x86_64,20260221-1.fc43.noarch,20260309_124513,b8262,toolbox,rocm-6.4.4,Qwen3.5-9B (Unsloth),UD-Q5_K_XL,512,863.07,128,29.42,6696,34,-fa 1 -ngl 99 -mmp 0,

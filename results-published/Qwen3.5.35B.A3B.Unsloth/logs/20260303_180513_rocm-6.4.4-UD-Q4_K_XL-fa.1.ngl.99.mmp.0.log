@@ -1,0 +1,13 @@
+Command: toolbox run -c llama-rocm-6.4.4 -- llama-bench -fa 1 -ngl 99 -mmp 0 -m /mnt/data/projects/ai/models/hub/models--unsloth--Qwen3.5-35B-A3B-GGUF/snapshots/48b9db213ecf5e4945393ac903dbc52ca852e081/Qwen3.5-35B-A3B-UD-Q4_K_XL.gguf
+Timestamp: 2026-03-03T18:05:13-08:00
+---
+ggml_cuda_init: found 1 ROCm devices:
+  Device 0: Radeon 8060S Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32
+| model                          |       size |     params | backend    | ngl | fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | -: | --------------: | -------------------: |
+| qwen35moe ?B Q4_K - Medium     |  20.70 GiB |    34.66 B | ROCm       |  99 |  1 |           pp512 |        926.05 ± 4.95 |
+| qwen35moe ?B Q4_K - Medium     |  20.70 GiB |    34.66 B | ROCm       |  99 |  1 |           tg128 |         39.78 ± 0.19 |
+
+build: ecd99d6a (8193)
+---------------------------------------------------------------------
+Duration: 29s
